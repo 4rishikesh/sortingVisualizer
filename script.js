@@ -1,14 +1,8 @@
 let number=[];
-//bars generation
 
-function generateBars(arr, index){
-  if(index == undefined){
-      index = [];
-  }
+function generateBars(arr, index=[]){ 
   let barsContainer = document.getElementById("bars");
-  while (barsContainer.firstChild){
-      barsContainer.removeChild(barsContainer.firstChild);
-  }
+  barsContainer.textContent="";
   for(let i = 0; i < arr.length; i++){
       let barContainer = document.createElement("div");
       barContainer.className = "bar-container";
@@ -18,9 +12,11 @@ function generateBars(arr, index){
       bar.style.width = "30px";
       bar.style.backgroundColor = index.includes(i) ? "red" : "#ffcc00";
       bar.className = "bar";
+
       let numLabel = document.createElement("div");
       numLabel.className = "num-label";
       numLabel.innerText = arr[i];
+      
       barContainer.appendChild(bar);
       barContainer.appendChild(numLabel);
       barsContainer.appendChild(barContainer);
