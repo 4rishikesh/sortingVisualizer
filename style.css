@@ -10,9 +10,10 @@ html,body{
   font-family: Arial, sans-serif;
 }
 
-h2{
+a,h2{
   font-weight: bold;
   color: #FFD700;
+  text-decoration: none;
 }
 
 h1{
