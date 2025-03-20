@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>VisualSort</title>
-    <link rel="stylesheet" href="style.css">
+  <title>visualSort</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-      <h2>VisualSort</h2>
-        <h1>Sorting Algorithm Visualizer</h1>
-        <div class="controls">
-          <label for="input">Enter positive Numbers:</label>
-          <input type="text" id="input" oninput="processInput()" placeholder="e.g. 6, 4, 9, 2 ( > 0 && < 70)">
-          <button onclick="randomNumber()">Random Numbers</button>
-          <select id="algorithm">
-              <option value="bubble">Bubble Sort</option>
-              <option value="selection">Selection Sort</option>
-              <option value="insertion">Insertion Sort</option>
-              <option value="merge">Merge Sort</option>
-              <option value="quick">Quick Sort</option>
-          </select>
-          <button onclick="sortArray()">Sort</button>
-      </div>
-    </header>
-
-    <div class="container">
-        <div id="bars"></div>
-    </div>
-    <footer>
-     <p>A project for Web Programming at NIT Warangal | Developed by Rishikesh R. Mahato</p>
-  </footer>  
-    <script src="script.js"></script>
+  <div class="align">
+    <h2>VisualSort</h2>
+  <h1>Sorting Algorithm Visualizer</h1>
+  <div class="container">
+    <p>Enter positive number:</p>
+    <input type="text" id="input" oninput="processInput()" placeholder="eg. 2,10,15,4 (>0 && <70)">
+    <button onclick="randomNumber()">Random Numbers</button>
+    <select id="algorithm">
+      <option value="bubble">Bubble Sort</option>
+      <option value="selection">Selection Sort</option>
+      <option value="insertion">Insertion Sort</option>
+      <option value="merge">Merge Sort</option>
+      <option value="quick">Quick Sort</option>
+      <option value="count">Count Sort</option>
+    </select>
+    <button onclick="sortArray()">Sort</button>
+  </div>
+  </div>
+  
+  <div class="bargraph">
+    <div id="bars"></div>
+  </div>
+  <footer>
+    <p>A project for Web Programming at NIT Warangal | Developed by Rishikesh R. Mahato</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
