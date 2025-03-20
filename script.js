@@ -171,28 +171,6 @@ async function mergeSort(arr, start = 0, end = arr.length - 1) {
   }
 }
 
-//count sort
-async function countSort(arr){
-  let n = arr.length;
-  let max = Math.max(...arr);
-  let count = new Array(max + 1).fill(0);
-  let output = new Array(n);
-  for (let i = 0; i < n; i++){
-      count[arr[i]]++;
-  }
-  for (let i = 1; i <= max; i++){
-      count[i] += count[i - 1];
-  }
-  for (let i = n - 1; i >= 0; i--){
-      output[--count[arr[i]]] = arr[i];
-      generateBars(output); 
-      await delay(500);
-  }
-  for (let i = 0; i < n; i++){
-      arr[i] = output[i];
-  }
-  generateBars(arr); 
-}
 
 //sort array
 function sortArray(){
@@ -210,7 +188,5 @@ function sortArray(){
         mergeSort(number);
     }else if (select == "quick"){
         quickSort(number);
-    }else if (select == "count"){
-        countSort(number);
     }
 }
