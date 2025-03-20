@@ -10,15 +10,6 @@ html,body{
   font-family: Arial, sans-serif;
 }
 
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background-color: #333;
-  color:  #FFFFFF;
-}
-
 h2{
   font-weight: bold;
   color: #FFD700;
@@ -30,7 +21,46 @@ h1{
   transform: translateX(-50%);
 }
 
-.container{
+.align{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #333;
+  color:  #FFFFFF;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+  gap: 10px;
+}
+
+.container input, 
+.container select, 
+.container button {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #555; 
+  border-radius: 5px;
+  background-color: #333; 
+  color: #FFFFFF;
+}
+
+.container button {
+  background-color: #ff8902;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: rgb(255, 115, 0);
+}
+
+.bargraph{
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -61,36 +91,6 @@ h1{
 
 .bar.highlight {
   background-color: red;
-}
-
-.controls {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 20px;
-  top: 100px;
-  gap: 10px;
-}
-
-.controls input, 
-.controls select, 
-.controls button {
-  width: 200px;
-  padding: 8px;
-  border: 1px solid #555; 
-  border-radius: 5px;
-  background-color: #333; 
-  color: #FFFFFF;
-}
-
-.controls button {
-  background-color: #ff8902;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.controls button:hover {
-  background-color: rgb(255, 115, 0);
 }
 
 footer {
