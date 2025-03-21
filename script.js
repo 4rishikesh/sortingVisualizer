@@ -65,7 +65,7 @@ async function bubbleSort(arr){
           if (arr[j] > arr[j + 1]){
               [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
               generateBars(arr, [j, j + 1]);
-              await delay(5);
+              await delay(0);
           }
       }
   }
